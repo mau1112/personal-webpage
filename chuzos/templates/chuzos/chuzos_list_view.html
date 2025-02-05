@@ -1,0 +1,19 @@
+<!DOCTYPE html> {% extends 'base.html' %} {% load static %} {%block title%}
+Mejores chuzos desgranados Barranquilla {%endblock%} 
+{%block css_files%}
+{%endblock%}
+{%block seo_tags %}
+<meta name="description" content="Descubre los mejores chuzos desgranados de carne y pollo en Barranquilla. Opiniones, recomendaciones y dónde encontrarlos.">
+<meta name="keywords" content="chuzo desgranado, chuzos barranquilla, chuzo carne, chuzo pollo, mejores chuzos, comida rápida barranquilla, restaurantes barranquilla">
+
+{%endblock%}
+{%block content%}
+<div class="container-fluid">
+
+</div>
+{%endblock%}
+{%block js_files%}
+<script>
+let chuzosData = JSON.parse('{{ chuzos | safe }}')
+</script>
+{%endblock%}

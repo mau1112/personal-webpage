@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Mauricio Galeano>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>{%block title %} {%endblock%}</title>
+    {%block seo_tags %}
+    {%endblock%}
+    {%block css_files%} {%endblock%}
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+    {%block content%} {%endblock%}
+</body>
+{%block js_files%} {%endblock%}
+
+</html>
