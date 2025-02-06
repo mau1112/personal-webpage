@@ -22,3 +22,5 @@ EXPOSE 8000
 
 # Run migrations before starting Gunicorn
 CMD ["sh", "-c", "pipenv run python manage.py migrate && pipenv run gunicorn mySite.wsgi:application --bind 0.0.0.0:8000"]
+
+RUN pipenv run python manage.py collectstatic --noinput

@@ -3,9 +3,10 @@ version: "3.8"
 services:
   web:
     build: .
-    command: gunicorn myproject.wsgi:application --bind 0.0.0.0:8000
+    command:  ["sh", "-c", "pipenv run python manage.py migrate && pipenv run python manage.py collectstatic --noinput && pipenv run gunicorn mySite.wsgi:application --bind 0.0.0.0:8000"]
     volumes:
       - .:/app
+      - ./staticfiles:/app/staticfiles
     ports:
       - "8000:8000"
     depends_on:
