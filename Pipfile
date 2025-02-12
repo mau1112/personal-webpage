@@ -7,6 +7,8 @@ name = "pypi"
 django = "*"
 gunicorn = "*"
 whitenoise = "*"
+django-tailwind = "*"
+django-browser-reload = "*"
 
 [dev-packages]
 model-bakery = "*"
